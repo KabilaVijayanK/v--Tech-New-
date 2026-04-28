@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 230 60% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 60% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 60% 10%;
+
+    /* Brand */
+    --navy: 232 70% 17%;
+    --navy-deep: 232 75% 12%;
+    --navy-soft: 232 50% 25%;
+    --accent-red: 6 63% 46%;
+    --accent-red-hover: 6 70% 40%;
+    --light-gray: 0 0% 96%;
+    --border-gray: 220 14% 88%;
+
+    --primary: 232 70% 17%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 232 70% 17%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 230 15% 40%;
+
+    --accent: 6 63% 46%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 232 70% 17%;
+
+    --radius: 0.25rem;
+
+    --gradient-navy: linear-gradient(135deg, hsl(232 75% 12%), hsl(245 60% 28%));
+    --gradient-product: linear-gradient(135deg, hsl(232 70% 17%), hsl(245 55% 32%));
+    --shadow-card: 0 1px 2px hsl(232 30% 10% / 0.06);
+    --shadow-card-hover: 0 18px 40px -12px hsl(232 50% 15% / 0.25);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: 'Barlow Condensed', 'Source Sans 3', sans-serif;
+    letter-spacing: 0.01em;
+  }
+}
+
+@layer components {
+  .container-x {
+    @apply mx-auto px-6 lg:px-12 max-w-7xl;
+  }
+}
